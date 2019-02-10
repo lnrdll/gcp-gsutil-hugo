@@ -23,7 +23,7 @@ pipelines:
           # Deploy site to Google Cloud Storage.
           #
           # update bucket permissions
-          - gsutil defacl ch -u AllUsers:R gs://<bucket name>
+          - gsutil -m defacl ch -u AllUsers:R gs://<bucket name>
 
           # copy files over
           - gsutil -m rsync -d -R public gs://<bucket name>
