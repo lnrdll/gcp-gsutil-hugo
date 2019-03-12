@@ -25,7 +25,7 @@ RUN apk add --update --no-cache \
 # Install Hugo
 ENV HUGO_VERSION=0.20.7
 
-RUN wget https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
+RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 RUN tar -vxxzf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 RUN rm -f hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 RUN mv hugo /usr/bin/hugo
