@@ -1,7 +1,34 @@
-# docker-gsutil_hugo
-Hugo and gsutil for Google Cloud Storage on Docker for pipeline
+# GCP gsutil+hugo+docker
+Hugo and gsutil for Google Cloud Storage on Docker for Bitbucket's pipeline.
 
-### bitbucket-pipeline.yml
+## Prerequisites
+
+* Bitbucket Account
+* GCP Account
+* Boto conf file
+
+### Dockerfile
+
+The Dockerfile has the information to build the container for the pipeline. You can get the image from [DockerHub](https://hub.docker.com/r/lunardellir/gsutil-hugo).
+
+```
+docker pull lunardellir/gsutil-hugo
+```
+
+### Boto config file
+
+* Location: /.boto
+
+```
+[Credentials]
+gs_access_key_id = XXXXXXXXXX
+gs_secret_access_key = XXXXXXXXXX
+```
+
+### bitbucket-pipeline.yaml
+
+This is a sample bitbucket-pipeline.yaml file.
+
 ```
 image: lunardellir/gsutil-hugo
 
@@ -31,3 +58,7 @@ pipelines:
           # set the main page suffix
           - gsutil web set -m index.html -e 404.html gs://<bucket name>
 ```
+
+## License
+
+This project is licensed under the Apache-2.0 License - see the [LICENSE](LICENSE) file for details
