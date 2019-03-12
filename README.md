@@ -9,7 +9,7 @@ Hugo and gsutil for Google Cloud Storage on Docker for Bitbucket's pipeline.
 
 ### Dockerfile
 
-The Dockerfile has the information to build the container for the pipeline. You can get the image from [DockerHub](https://hub.docker.com/r/lunardellir/gsutil-hugo).
+The [Dockerfile](Dockerfile) has the information to build the container for the pipeline. You can get the image from [DockerHub](https://hub.docker.com/r/lunardellir/gsutil-hugo).
 
 ```
 docker pull lunardellir/gsutil-hugo
