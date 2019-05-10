@@ -1,5 +1,4 @@
 FROM alpine:latest
-MAINTAINER Robson Lunardelli <robson@lunardelli.us>
 
 # Install dependencies
 RUN apk add --update --no-cache \
@@ -23,7 +22,7 @@ RUN apk add --update --no-cache \
   && rm -rf /var/cache/apk/*
 
 # Install Hugo
-ENV HUGO_VERSION=0.20.7
+ENV HUGO_VERSION=0.55.5
 
 RUN wget https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 RUN tar -vxxzf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
